@@ -6,13 +6,17 @@ $rose: #fbe0c3;
 $peach: #ffbb98;
 $pizarro: #7d8e95;
 $charcoal: #344648;
+$bone: #e6e0d1;
 
-:root{
-  --background-color:$charcoal;
-  --container-color:$pizarro;
-  --primary-color:$peach;
-  --secundary-color:$rose;
+:root {
+  --background-color: #{$charcoal};
+  --font-color: #{$bone};
+  --container-color: #{$pizarro};
+  --primary-color: #{$peach};
+  --secundary-color: #{$rose};
 }
 
-
-
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
