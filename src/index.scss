@@ -9,9 +9,10 @@ $charcoal: #344648;
 $bone: #e6e0d1;
 
 :root {
-  --background-color: #{$charcoal};
+  --background-color: #{$pizarro};
   --font-color: #{$bone};
-  --container-color: #{$pizarro};
+  --font-color-invert: #{$charcoal};
+  --container-color: #{$charcoal};
   --primary-color: #{$peach};
   --secundary-color: #{$rose};
 }
@@ -26,9 +27,28 @@ main {
   background: var(--container-color);
   width: max(1000px);
   margin: auto;
+  min-height: 100vh;
 }
 
 .input {
   border-bottom: 1px solid var(--primary-color);
   width: 100%;
+}
+
+.card-note {
+  padding: 1rem;
+  &__tittle {
+    font-size: 2rem;
+  }
+  &__content {
+  }
+}
+
+.button {
+  padding: 0.5rem;
+  &--delete {
+    @extend .button;
+    background-color: var(--primary-color);
+    color: var(--font-color-invert);
+  }
 }

@@ -1,6 +1,7 @@
 import React from 'react'
-import { NoteForm } from './componens'
+import { NoteForm , NoteList} from './components'
 import { Note } from './models'
+import { getNotes } from './services'
 
 // const notes = [
 //   {tittle:'1',content:'hola mundo'}
@@ -9,12 +10,13 @@ import { Note } from './models'
 // localStorage.setItem('notes', JSON.stringify(notes))
 
 function App() {
-  const notes = JSON.parse(localStorage.getItem('notes') ?? '[]')
+  const notes = getNotes()
   console.log(notes)
 
   return (
       <main>
       <NoteForm />
+      <NoteList notes={notes} />
       </main>
   )
 }
