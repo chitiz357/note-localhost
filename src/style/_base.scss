@@ -79,9 +79,10 @@
     color: inherit;
     display: block;
     /* opcional */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    // -webkit-appearance: none;
+    // -moz-appearance: none;
+    // appearance: none;
+    // border-bottom: 1px black solid;
   }
   
   table,

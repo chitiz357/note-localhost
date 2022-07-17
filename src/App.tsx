@@ -1,4 +1,6 @@
-import React from "react";
+import React from 'react'
+import { NoteForm } from './componens'
+import { Note } from './models'
 
 // const notes = [
 //   {tittle:'1',content:'hola mundo'}
@@ -7,27 +9,16 @@ import React from "react";
 // localStorage.setItem('notes', JSON.stringify(notes))
 
 function App() {
-  const notes = JSON.parse(localStorage.getItem('notes')! )||[]
+  const notes = JSON.parse(localStorage.getItem('notes') ?? '[]')
   console.log(notes)
 
   return (
-    <div className="App">
-      <h1>daffafd</h1>
+      <main>
       <NoteForm />
-      <NotesList notes={notes} />
-    </div>
+      </main>
   )
 }
 
-function NoteForm() {
-  return (
-    <form>
-      <h2>notes</h2>
-      <label htmlFor="">notes</label>
-      <input type="text" />
-    </form>
-  )
-}
 
 function NotesList({ notes }: { notes: Note[] }) {
   return (
@@ -48,10 +39,6 @@ function NoteCard({ note }: { note: Note }) {
   )
 }
 
-interface Note {
-  tittle: string
-  content: string
-  id: number
-}
+
 
 export default App
