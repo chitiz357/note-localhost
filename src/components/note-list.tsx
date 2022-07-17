@@ -4,7 +4,7 @@ import { NoteCard } from './note-card'
 
 export function NoteList({ notes }: { notes: Array<Note> }) {
   return (
-    <div>
+    <div className='list'>
       {notes.map((note) => (
         <NoteCard note={note} key={note.id}/>
       ))}

@@ -25,23 +25,10 @@ body {
 
 main {
   background: var(--container-color);
-  width: max(1000px);
+  max-width: 1000px;
   margin: auto;
   min-height: 100vh;
-}
-
-.input {
-  border-bottom: 1px solid var(--primary-color);
-  width: 100%;
-}
-
-.card-note {
-  padding: 1rem;
-  &__tittle {
-    font-size: 2rem;
-  }
-  &__content {
-  }
+  padding: 0.8rem;
 }
 
 .button {
@@ -51,4 +38,27 @@ main {
     background-color: var(--primary-color);
     color: var(--font-color-invert);
   }
+}
+.input {
+  border-bottom: 1px solid var(--primary-color);
+  width: 100%;
+  resize: none;
+}
+.tittle {
+  text-align: center;
+  font-size: 4rem;
+  padding: 1rem;
+}
+
+.card-note {
+  &__tittle {
+    font-size: 2rem;
+  }
+  &__content {
+  }
+}
+
+.list{
+  display: grid;
+  gap: 1rem;
 }

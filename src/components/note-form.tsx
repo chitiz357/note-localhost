@@ -18,7 +18,7 @@ export function NoteForm() {
 
   function save(event:React.FormEvent<HTMLFormElement>){
     event.preventDefault()
-    saveNote({tittle,content,id:1})
+    saveNote({tittle,content})
     useTittle('')
     useContent('')
   }
