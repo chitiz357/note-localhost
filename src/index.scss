@@ -65,6 +65,8 @@ main {
 
 // modules
 .card-note {
+  display: flex;
+  justify-content: space-between;
   &__tittle {
     font-size: 2rem;
   }

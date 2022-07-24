@@ -18,9 +18,9 @@ export function NoteForm() {
     console.log(content)
   }
 
-  function save(event:React.FormEvent<HTMLFormElement>){
+  function save(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    noteContext.postNote({tittle,content})
+    noteContext.postNote({ tittle, content })
     useTittle('')
     useContent('')
   }
@@ -42,8 +42,7 @@ export function NoteForm() {
         value={content}
         onChange={handleContent}
       />
-      <input type="submit"  />
-
+      <input type="submit" />
     </form>
   )
 }
