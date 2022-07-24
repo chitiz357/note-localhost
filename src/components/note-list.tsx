@@ -1,11 +1,14 @@
 import { Note } from '../models'
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import { NoteCard } from './note-card'
+import { NoteContext } from '../context/noteContext'
 
 export function NoteList({ notes }: { notes: Array<Note> }) {
+const noteContext = useContext(NoteContext)
+
   return (
     <div className='list'>
-      {notes.map((note) => (
+      {noteContext.notes.map((note) => (
         <NoteCard note={note} key={note.id}/>
       ))}
     </div>

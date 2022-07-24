@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { NoteContext } from '../context/noteContext'
 import { saveNote } from '../services'
 
 export function NoteForm() {
+  const noteContext = useContext(NoteContext)
   const [tittle, useTittle] = useState('')
   const [content, useContent] = useState('')
 
@@ -18,7 +20,7 @@ export function NoteForm() {
 
   function save(event:React.FormEvent<HTMLFormElement>){
     event.preventDefault()
-    saveNote({tittle,content})
+    noteContext.postNote({tittle,content})
     useTittle('')
     useContent('')
   }
