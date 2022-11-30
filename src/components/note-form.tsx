@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { NoteContext } from '../context/noteContext'
-import { saveNote } from '../services'
+import { NoteContext } from '../context/note'
 
 export function NoteForm() {
   const noteContext = useContext(NoteContext)
@@ -26,7 +25,10 @@ export function NoteForm() {
   }
 
   return (
+
+    //TODO: validate 
     <form onSubmit={save}>
+    {/*TODO: validate tittle */}
       <label htmlFor="tittle">tittle</label>
       <input
         name="tittle"
@@ -34,6 +36,7 @@ export function NoteForm() {
         value={tittle}
         onChange={handleTittle}
       />
+      {/* TODO: validate content */}
       <label htmlFor="content">content</label>
       <textarea
         name="content"

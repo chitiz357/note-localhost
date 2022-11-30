@@ -1,7 +1,7 @@
 import { Note } from '../models'
 import React, { useContext, useEffect } from 'react'
 import { NoteCard } from './note-card'
-import { NoteContext } from '../context/noteContext'
+import { NoteContext } from '../context/note'
 
 export function NoteList({ notes }: { notes: Array<Note> }) {
 const noteContext = useContext(NoteContext)
